@@ -1,0 +1,1444 @@
+@charset "utf-8";
+
+    html{
+        font-size: 62.5%;
+    }
+    
+    body{
+        background-color: #FFF0F5;
+        font-size: 1.6rem;
+    }
+
+    
+  /*----------
+        ヘッダー
+    ----------*/
+
+    .header{
+    padding:10px;
+    background: linear-gradient(-45deg, rgb(240, 187, 95), rgb(238, 96, 96),
+    rgb(255, 146, 255), rgb(157, 157, 250),rgb(203, 141, 248));
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .headerLogo{
+        width: 40%;
+        margin-right: auto;
+    }
+    .logo-login{
+        position: relative;
+    }
+
+    .header-wrapper{
+        display: block;
+    }
+
+    .toplogo{
+        width: 50%;
+        height: auto;
+    }
+    
+    img.example1 {
+        width: 180px;
+        height: 60px;
+    }
+
+
+    .icon1{
+    /*position: absolute;*/
+    /*bottom: 20px;*/
+    }
+    
+    .icon2{
+        border-radius: 50%;
+        float: none;
+    }
+    
+    /*----------*/
+    /*ユーザーアイコン*/
+    /*----------*/
+    
+    .sp-header-user-img{
+        position: absolute;
+        top:5%;
+        left: 60%;
+        display: block;
+        width: auto;
+        margin: 0 10px 0px 10;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 30px;
+    }  
+    
+    .box2 {
+        padding: 6px;
+        position: relative;
+        bottom: 20px;
+        display: inline-block;
+        width: auto;
+        color: #f58080;
+        background: #FFF;
+        border: solid 1px #ffe2e0;
+        border-radius: 10px;
+        font-size: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+    
+    /*----------
+        PC版の表示の仕方
+    ----------*/
+    
+    .pc-view{
+    max-width: 700px;
+    margin: auto;
+    background-color: #ffe2e036;
+    padding-bottom: 30px;
+    }
+    
+    
+    /*----------
+        アイテム(PC)
+    ----------*/
+   
+   .card{
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 10px 10px 10px 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    }
+    
+
+    .service-img {
+    position: absolute;
+    border-radius: 5px 5px 5px 5px;
+    margin: 0px;
+    width: 100px;
+    height: 100px;  
+    }
+    .service-detail {
+    margin-left: 130px;
+    padding-top: 1px;
+    min-height: 100px;
+    }
+    .service-title {
+        color: rgb(8, 8, 8);
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .service-user-info{
+    
+    display: flex;
+    }
+
+    .user-icon {
+        width: 30px;
+        height: 30px;
+        /* margin-top: 1px; */
+        margin-right: 3px;
+        border-radius: 50%;
+        margin-bottom: 3px;
+    }
+    .name{
+        color: #999;
+        margin-top: 5px;
+    }
+    .box {
+        display: inline-block;
+        padding: 0.5em 1em;
+        width: auto;
+        font-size: 10px;
+        color: #f58080;
+        background: #FFF;
+        border: solid 1px #ffe2e0;
+        border-radius: 10px;
+        
+    }
+    .box p {
+        margin: 0; 
+        padding: 0;
+    }
+
+    .service-status {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    }
+
+    .service-price{
+    /*position: absolute;*/
+    /*margin-left: 10px;*/
+    }
+    .price1{
+        color: #f58080;/*文字色*/
+    }
+
+    .service-star{
+    position: relative;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+    }
+
+    .star-count{
+        font-size: 10px;
+        line-height: 1;
+        margin-right: 3px;
+        margin-left: 1px;
+        margin-bottom: 2px;
+    }
+
+    .star-icon {
+        width: 16px;
+        height: 16px;
+        margin-top: 1px;
+        float: left;
+        border-radius: 50%;
+    }
+
+    .heart-icon{
+        width: 16px;
+        height: 16px;
+        margin-top: 10px;
+        margin-right: 3px;
+        margin-left: 2px;
+        
+    }
+    .heart-count{
+    font-size: 10px;
+    line-height: 1;
+    margin-right: 3px;
+    margin-left: 1px;
+    margin-bottom: 2px;
+    }
+
+    .balloon1 {
+       position:relative;
+       bottom: 0;
+       display: inline-block;
+       margin: 10px 0 5px 20px;
+       padding: 7px 10px;
+       width: 85%;
+       color: #555;
+       font-size: 16px;
+       background: #ffe2e0;
+       border-radius: 15px;
+   }
+   
+   .balloon1:before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        margin-top: -12px;
+        border: 12px solid transparent;
+        border-right: 14px solid #ffe2e0;
+        z-index: 1;
+   }
+   
+   .balloon1 p {
+       margin: 0;
+       padding: 0;
+   }
+   
+   
+   
+   /*----------
+    プロフィール
+    ----------*/
+    .profile-header{
+    position: relative;
+    height: 106px;
+    }
+
+    .profile-header-img{
+    /*width:fit-content;→これ、なぜかあたらない問題*/
+    width:370px;
+    height:106px; 
+    object-fit:cover;   
+    }
+    
+    .item_block{
+    padding-top: 60px;
+    position: relative;
+    }
+    
+    .profile-img{
+        position: absolute;
+        top: 0px;
+    }
+    
+    .img-list{
+        text-align: center;
+    }
+    
+    .item-img{
+        width: 100px;
+        height:100px;
+    }
+    
+    /* ＊＊＊このへんは、データ取り込みの観点で同じ方が良ければ消す。＊＊＊ */
+
+    .profile-icon{
+        border-radius: 5px 5px 5px 5px;
+        margin: 10px;
+        width: 100px;
+        height: 100px; 
+        border-radius: 50%; 
+    }
+    .profile-detail{
+        margin-left: 130px;
+        padding-top: 1px;
+    }
+    .profile-user-info{
+        line-height: 1px;
+        display: flex;  
+    }
+    .name2{
+        color: rgb(252, 180, 180);
+        font-size: 20px;
+        margin-top: 15px;
+    }
+    .service-star2{
+        position: relative;
+        display: flex;
+        top: 10px;
+        bottom: 20px;
+        align-items: center;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+    .profile-title{
+        color: rgb(100, 99, 99);
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        margin: 10px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .tab{
+      margin: 15px;  
+      text-align: center;
+    }
+    .profile-text{
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 10px 10px 10px 10px;
+    background: #fff;
+    border-radius: 5px;
+    border: solid 1px #b3b3b6;
+    line-height: 1.4;
+    }
+
+    .profile-price{
+    text-align: right;
+    margin-right: 15px;
+    }
+
+    .price2{
+        color: #f58080;/*文字色*/
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .profile-button{
+        margin: 10px;
+    }
+
+    .buy-button{
+        margin: 0;
+        padding: 10px 0;
+        width: 100%;
+        background-color: #f58080;
+        border: 1px solid #c76969;
+        font-size: 14px;
+        line-height: 22px;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 5px;
+        background-image: linear-gradient(180deg,#f78e8e,#f78e8e);
+    }
+
+    /*----------
+    購入画面
+    ----------*/
+
+    .service-img2{
+        padding: 5px;
+    }
+
+    .sales-header{
+        margin: 0;
+        padding: 0px 0;
+        width: 100%;
+        height: 39px;
+        background-color: #f58080;
+        border: 1px solid #f58080;
+        font-size: 14px;
+        line-height: 22px;
+        color: #fff;
+        font-weight: 700;
+        background-image: linear-gradient(180deg,#f78e8e,#f78e8e); 
+        text-align: center;
+    }
+    .sales-header-text{
+        margin-top: 10px;
+    }
+
+    .sales-card{
+        position: relative;
+        height: auto;
+        width: auto;
+        margin: 10px 10px 10px 10px;
+        background: #fff;
+        border-radius: 5px; 
+        border: solid 1px #f78e8e;
+    }
+
+
+    .sales-header2{
+        margin: 0;
+        padding: 0px 0;
+        width: 100%;
+        background-color: #f58080;
+        border: 1px solid #c76969;
+        font-size: 14px;
+        line-height: 22px;
+        color: #fff;
+        font-weight: 700;
+        background-image: linear-gradient(180deg,#f78e8e,#f78e8e);
+        text-align: center;
+    }
+    .sales-price{
+        position: relative;
+        height: auto;
+        width: auto;
+        margin: 10px 10px 10px 10px;
+        background: #fff;
+        border-radius: 5px;
+        border: solid 1px #f78e8e;
+        text-align: right;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .price3{
+        position:absolute; 
+        font-size: 15px;
+        margin-left: 10px;
+        color: #f58080;
+    }
+    .price4{
+        font-size: 15px;
+        margin-right: 10px;
+        color: #f58080;
+    }
+
+    .sales-way{
+        position: relative;
+        height: auto;
+        width: auto;
+        margin: 10px 10px 10px 10px;
+        background: #fff;
+        border-radius: 5px;
+        border: solid 1px #f78e8e;
+        
+    }
+
+    .sales-way-button{
+        margin-right: 140px;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .sales-way-radio{
+        margin-right: 10px;
+    }
+
+
+    /*----------
+    ツール選択
+    ----------*/
+    
+    .tool-box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    /* align-items: center; */
+    display: flex;
+    }
+
+    .tool-box-child1{
+        display: inline-block;
+        padding: 0.5em 1em; 
+        width: auto;
+        font-size: 12px;
+        font-weight: bold;
+        color: #f7f5f5;
+        background: #f58080;
+        border: solid 1px #f78e8e;
+        border-radius: 10px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    
+    .tool-box-child2{
+        display: inline-block;
+        padding: 0.5em 1em; 
+        width: auto;
+        font-size: 12px;
+        font-weight: bold;
+        color: #f58080;
+        background: #f7f5f5;
+        border: solid 1px #f58080;
+        border-radius: 10px;
+        margin-right: 15px;
+        margin-left: 15px;
+        
+    }
+
+
+    /*----------
+    チャットページ
+    ----------*/
+    
+    .chat1{
+        padding: 24px;
+        padding-bottom: 10px;  
+        padding-top: 10px;
+        line-height: 1.5;
+    }
+    .message-box{
+        overflow:auto;
+        height:400px;
+        border:1px solid #f78e8e;
+        border-radius: 5px;
+        
+    }
+    .message-content {
+        background: #fff;
+    }
+
+    .chat2{
+        padding: 24px;
+        padding-top: 0px;  
+    }
+
+    .message-content2 {
+        padding-top: 0px;
+        background: #fff;
+    }
+
+    .textarea-default{
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+        max-width: 100%;
+        min-height: 100px;
+        border: 1px solid #ccc;
+        background: #fff;
+        font-size: 16px;
+        border: 1px solid #f78e8e;
+        border-radius: 5px;
+        
+    }
+
+    /* .login-form-inner:first-child {
+        padding: 24px 32px;
+        border: #ccc;
+    } */
+
+    .btn-chat{
+        margin: 0;
+        padding: 10px 0;
+        width: 100%;
+        background-color: #f58080;
+        border: 1px solid #c76969;
+        font-size: 14px;
+        line-height: 22px;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 5px;
+        background-image: linear-gradient(180deg,#f78e8e,#f78e8e);  
+    }
+    
+    .chat-icon{
+        width: 60px;
+        height:60px;
+        /* margin-top: 1px; */
+        margin-right: 3px;
+        border-radius: 50%;
+    }
+    
+    .chat-user{
+        padding-left: 10px;
+    }
+    
+    .chat-text{
+        /*padding-left: 60px;*/
+        flex-grow: 1;
+        padding: 10px;
+        background: #f9f7ff;
+        border-radius: 5px;
+    }
+    .chat-unique-message{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .chat-name-blk{
+        flex-basis: 80px;
+        flex-shrink: 0;
+        padding-right: 5px;
+    }
+
+
+    /*----------
+        マイページ
+        ----------*/
+        .user-button1{
+            margin: 10px;
+        }
+    
+        .user-button2{
+            margin: 0;
+            padding: 10px 0;
+            width: 100%;
+            background-color: #f58080;
+            border: 1px solid #c76969;
+            font-size: 14px;
+            line-height: 22px;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 5px;
+            background-image: linear-gradient(180deg,#f78e8e,#f78e8e);
+        }
+    
+        
+        .prf{
+            /*margin-left: 10px;*/
+            padding: 0 20px;
+            box-sizing: border-box
+        }
+        
+        .prf2{
+            margin-top: 15px;
+        }
+        
+        .label{
+            color: #333;
+            display: block;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+        
+        .user_icon{
+            width: 100px;
+            height: 100px;
+        }
+
+        /*----------
+    商品出品ページ
+    ----------*/
+        
+    .textarea-default {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    height: 50px; /*ここだけ違う*/
+    max-width: 100%;
+    min-height: 0px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    border: 1px solid #f78e8e;
+    border-radius: 5px;
+    box-sizing: border-box;
+    }
+    
+    .textarea-default2 {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    height: 25px; /*ここだけ違う*/
+    max-width: 100%;
+    min-height: 0px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    border: 1px solid #f78e8e;
+    border-radius: 5px;
+    box-sizing: border-box;
+    }
+       
+    .ok-button{
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px 0;
+        width: 96%;
+        background-color: #f58080;
+        border: 1px solid #c76969;
+        font-size: 14px;
+        line-height: 22px;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 5px;
+        background-image: linear-gradient(180deg,#f78e8e,#f78e8e);
+    }
+
+
+
+
+
+
+
+
+@media screen and (max-width:640px){
+  
+    
+    body {background-color: #FFF0F5;
+    font-size: 1.6rem;
+    }
+    
+    /*----------*/
+    /*    ヘッダー*/
+    /*----------*/
+    
+    .header{
+    padding:10px;
+    background: linear-gradient(-45deg, rgb(240, 187, 95), rgb(238, 96, 96),
+    rgb(255, 146, 255), rgb(157, 157, 250),rgb(203, 141, 248));
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .headerLogo{
+        width: 40%;
+        margin-right: auto;
+    }
+    .logo-login{
+        position: relative;
+    }
+
+    .header-wrapper{
+        display: block;
+    }
+
+    .toplogo{
+        width: 50%;
+        height: auto;
+    }
+    
+    img.example1 {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .icon1{
+    /*position: absolute;*/
+    /*bottom: 20px;*/
+    }
+    
+    .icon2{
+        border-radius: 50%;
+        float: none;
+    }
+    
+    /*----------*/
+    /*ユーザーアイコン*/
+    /*----------*/
+    
+    .sp-header-user-img{
+        position: absolute;
+        top:5%;
+        left: 60%;
+        display: block;
+        width: auto;
+        margin: 0 10px 0px 10;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 30px;
+    }  
+    
+    .box2 {
+        padding: 6px;
+        position: relative;
+        bottom: 20px;
+        display: inline-block;
+        width: auto;
+        color: #f58080;
+        background: #FFF;
+        border: solid 1px #ffe2e0;
+        border-radius: 10px;
+        font-size: 15px;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-top: 30px;
+        margin-left: 10px;
+        
+    }
+    
+    /*----------
+        アイテム
+    ----------*/
+    
+    
+    .card{
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 10px 10px 10px 10px;    
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    }
+    
+
+    .service-img {
+    position: absolute;
+    border-radius: 5px 5px 5px 5px;
+    margin: 0px;
+    width: 100px;
+    height: 100px; 
+    }
+    .service-detail {
+        margin-left: 130px;
+        padding-top: 1px;
+        min-height: 100px;
+    }
+    .service-title {
+        color: rgb(8, 8, 8);
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        margin-top: 0px;
+    }
+
+    .service-user-info{
+    
+    display: flex;
+    }
+
+    .user-icon {
+        width: 30px;
+        height: 30px;
+        /* margin-top: 1px; */
+        margin-right: 3px;
+        border-radius: 50%;
+        margin-bottom: 3px;
+    }
+    .name{
+        color: #999;
+        margin-top: 5px;
+    }
+    .box {
+        display: inline-block;
+        padding: 0.5em 1em;
+        width: auto;
+        font-size: 10px;
+        color: #f58080;
+        background: #FFF;
+        border: solid 1px #ffe2e0;
+        border-radius: 10px;
+        
+    }
+    .box p {
+        margin: 0; 
+        padding: 0;
+    }
+
+    .service-status {
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        
+    }
+
+    .service-price{
+    /*position: absolute;*/
+    /*margin-left: 10px;*/
+    }
+    .price1{
+        color: #f58080;/*文字色*/
+    }
+
+    .service-star{
+    position: relative;
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+    }
+
+    .star-count{
+        font-size: 10px;
+        line-height: 1;
+        margin-right: 3px;
+        margin-left: 1px;
+        margin-bottom: 2px;
+    }
+
+    .star-icon {
+        width: 16px;
+        height: 16px;
+        margin-top: 1px;
+        float: left;
+        border-radius: 50%;
+    }
+
+    .heart-icon{
+        width: 16px;
+        height: 16px;
+        margin-top: 10px;
+        margin-right: 3px;
+        margin-left: 2px;
+        
+    }
+    .heart-count{
+    font-size: 10px;
+    line-height: 1;
+    margin-right: 3px;
+    margin-left: 1px;
+    margin-bottom: 2px;
+    }
+
+    .balloon1 {
+       position:relative;
+       bottom: 0;
+       display: inline-block;
+       margin: 10px 0 5px 20px;
+       padding: 7px 10px;
+       width: 85%;
+       color: #555;
+       font-size: 16px;
+       background: #ffe2e0;
+       border-radius: 15px;
+   }
+   
+   .balloon1:before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: -20px;
+        margin-top: -12px;
+        border: 12px solid transparent;
+        border-right: 14px solid #ffe2e0;
+        z-index: 1;
+   }
+   
+   .balloon1 p {
+       margin: 0;
+       padding: 0;
+   }
+   
+   
+   /*----------
+    プロフィール
+    ----------*/
+    .profile-header{
+    position: relative;
+    height: 106px;
+    }
+
+    .profile-header-img{
+    /*width:fit-content;→これ、なぜかあたらない問題*/
+    width:370px;
+    height:106px; 
+    object-fit:cover;   
+    }
+    
+    .item_block{
+    padding-top: 60px;
+    position: relative;
+    }
+    
+    .profile-img{
+        position: absolute;
+        top: 0px;
+    }
+    
+    .img-list{
+        text-align: center;
+    }
+    
+    .item-img{
+        width: 100px;
+        height:100px;
+    }
+    
+    /* ＊＊＊このへんは、データ取り込みの観点で同じ方が良ければ消す。＊＊＊ */
+
+    .profile-icon{
+        border-radius: 5px 5px 5px 5px;
+        margin: 10px;
+        width: 100px;
+        height: 100px; 
+        border-radius: 50%; 
+    }
+    .profile-detail{
+        margin-left: 130px;
+        padding-top: 1px;
+    }
+    .profile-user-info{
+        line-height: 1px;
+        display: flex;  
+    }
+    .name2{
+        color: rgb(252, 180, 180);
+        font-size: 20px;
+        margin-top: 15px;
+    }
+    .service-star2{
+        position: relative;
+        display: flex;
+        top: 10px;
+        bottom: 20px;
+        align-items: center;
+        line-height: 30px;
+        margin-bottom: 10px;
+    }
+    .profile-title{
+        color: rgb(100, 99, 99);
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 10px;
+        margin: 10px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .tab{
+      margin: 15px;  
+      text-align: center;
+    }
+    .profile-text{
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 10px 10px 10px 10px;
+    background: #fff;
+    border-radius: 5px;
+    border: solid 1px #b3b3b6;
+    line-height: 1.4;
+    }
+
+    .profile-price{
+    text-align: right;
+    margin-right: 15px;
+    }
+
+    .price2{
+        color: #f58080;/*文字色*/
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .profile-button{
+        margin: 10px;
+    }
+
+    .buy-button{
+        margin: 0;
+        padding: 10px 0;
+        width: 100%;
+        background-color: #f58080;
+        border: 1px solid #c76969;
+        font-size: 14px;
+        line-height: 22px;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 5px;
+        background-image: linear-gradient(180deg,#f78e8e,#f78e8e);
+    }
+    
+    
+    /*----------
+    購入画面
+    ----------*/
+
+    .sales-header{
+        margin: 0;
+        padding: 0px 0;
+        width: 100%;
+        height: 39px;
+        background-color: #f58080;
+        border: 1px solid #f58080;
+        font-size: 14px;
+        line-height: 22px;
+        color: #fff;
+        font-weight: 700;
+        background-image: linear-gradient(180deg,#f78e8e,#f78e8e); 
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .sales-header-text{
+        margin-top: 10px;
+    }
+
+    .sales-card{
+        position: relative;
+        height: auto;
+        width: auto;
+        margin: 10px 10px 10px 10px;
+        background: #fff;
+        border-radius: 5px; 
+        border: solid 1px #f78e8e;
+    }
+
+
+    .sales-header2{
+        margin: 0;
+        padding: 0px 0;
+        width: 100%;
+        background-color: #f58080;
+        border: 1px solid #c76969;
+        font-size: 14px;
+        line-height: 22px;
+        color: #fff;
+        font-weight: 700;
+        background-image: linear-gradient(180deg,#f78e8e,#f78e8e);
+        text-align: center;
+    }
+    .sales-price{
+        position: relative;
+        height: auto;
+        width: auto;
+        margin: 10px 10px 10px 10px;
+        background: #fff;
+        border-radius: 5px;
+        border: solid 1px #f78e8e;
+        text-align: right;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .price3{
+        position:absolute; 
+        font-size: 15px;
+        margin-left: 10px;
+        color: #f58080;
+    }
+    .price4{
+        font-size: 15px;
+        margin-right: 10px;
+        color: #f58080;
+    }
+
+    .sales-way{
+        position: relative;
+        height: auto;
+        width: auto;
+        margin: 10px 10px 10px 10px;
+        background: #fff;
+        border-radius: 5px;
+        border: solid 1px #f78e8e;
+        
+    }
+
+    .sales-way-button{
+        margin-right: 140px;
+        font-size: 15px;
+        margin-left: 10px;
+    }
+
+    .sales-way-radio{
+        margin-right: 10px;
+    }
+    
+    /*----------
+    購入確認の画面
+    ----------*/
+
+    .sales-confirm-way{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    }
+    
+    .sales-confirm-attention{
+        position: relative;
+        height: auto;
+        width: auto;
+        margin: 10px 10px 10px 10px;
+        background: #fdf7e0;
+        border-radius: 5px;
+        border: solid 1px #ffe2e0;
+        padding: 13px;
+        font-size: 12px;
+        box-sizing: border-box;
+    }
+    .attention{
+        font-size: 14px;
+        color: red;
+    }
+    .order-attention2{
+        line-height: 1.5;
+    }
+    
+    /*----------
+    ツール選択
+    ----------*/
+    
+    .tool-box{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+    /* align-items: center; */
+    display: flex;
+    }
+
+    .tool-box-child1{
+        display: inline-block;
+        padding: 0.5em 1em; 
+        width: auto;
+        font-size: 12px;
+        font-weight: bold;
+        color: #f7f5f5;
+        background: #f58080;
+        border: solid 1px #f78e8e;
+        border-radius: 10px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    
+    .tool-box-child2{
+        display: inline-block;
+        padding: 0.5em 1em; 
+        width: auto;
+        font-size: 12px;
+        font-weight: bold;
+        color: #f58080;
+        background: #f7f5f5;
+        border: solid 1px #f58080;
+        border-radius: 10px;
+        margin-right: 15px;
+        margin-left: 15px;
+        
+    }
+    
+    
+    /*----------
+    チャットページ
+    ----------*/
+    
+    .chat1{
+        padding: 24px;
+        padding-bottom: 10px;  
+        padding-top: 10px;
+        line-height: 1.5;
+    }
+    .message-box{
+        overflow:auto;
+        height:400px;
+        border:1px solid #f78e8e;
+        border-radius: 5px;
+        
+    }
+    .message-content {
+        background: #fff;
+    }
+
+    .chat2{
+        padding: 24px;
+        padding-top: 0px;  
+    }
+
+    .message-content2 {
+        padding-top: 0px;
+        background: #fff;
+    }
+
+    .textarea-default{
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+        max-width: 100%;
+        min-height: 100px;
+        border: 1px solid #ccc;
+        background: #fff;
+        font-size: 16px;
+        border: 1px solid #f78e8e;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    /* .login-form-inner:first-child {
+        padding: 24px 32px;
+        border: #ccc;
+    } */
+
+    .btn-chat{
+        margin: 0;
+        padding: 10px 0;
+        width: 100%;
+        background-color: #f58080;
+        border: 1px solid #c76969;
+        font-size: 14px;
+        line-height: 22px;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 5px;
+        background-image: linear-gradient(180deg,#f78e8e,#f78e8e);  
+    }
+    
+    .chat-icon{
+        width: 60px;
+        height:60px;
+        /* margin-top: 1px; */
+        margin-right: 3px;
+        border-radius: 50%;
+    }
+    
+    .chat-user{
+        padding-left: 10px;
+    }
+    
+    .chat-text{
+        /*padding-left: 60px;*/
+        flex-grow: 1;
+        padding: 10px;
+        background: #f9f7ff;
+        border-radius: 5px;
+    }
+    .chat-unique-message{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+    .chat-name-blk{
+        flex-basis: 80px;
+        flex-shrink: 0;
+        padding-right: 5px;
+    }
+    
+    
+    /*----------
+    マイページ
+    ----------*/
+    .user-button1{
+        margin: 10px;
+    }
+
+    .user-button2{
+        margin: 0;
+        padding: 10px 0;
+        width: 100%;
+        background-color: #f58080;
+        border: 1px solid #c76969;
+        font-size: 14px;
+        line-height: 22px;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 5px;
+        background-image: linear-gradient(180deg,#f78e8e,#f78e8e);
+    }
+
+    
+    .prf{
+        /*margin-left: 10px;*/
+    }
+    
+    .prf2{
+        margin-top: 15px;
+    }
+    
+    .label{
+        color: #333;
+        display: block;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .label2{
+        color: #ccc;
+        display: block;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .user_icon{
+        width: 100px;
+        height: 100px;
+    }
+    
+    
+    
+    /*----------
+    商品出品ページ(モバイル)
+    ----------*/
+        
+    .textarea-default {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    height: 50px; /*ここだけ違う*/
+    max-width: 100%;
+    min-height: 0px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    border: 1px solid #f78e8e;
+    border-radius: 5px;
+    box-sizing: border-box;
+    }
+    
+    .textarea-default2 {
+    display: block;
+    margin: 10px 0;
+    width: 100%;
+    height: 25px; /*ここだけ違う*/
+    max-width: 100%;
+    min-height: 0px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    border: 1px solid #f78e8e;
+    border-radius: 5px;
+    box-sizing: border-box;
+    }
+       
+    .ok-button{
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px 0;
+        width: 96%;
+        background-color: #f58080;
+        border: 1px solid #c76969;
+        font-size: 14px;
+        line-height: 22px;
+        color: #fff;
+        font-weight: 700;
+        border-radius: 5px;
+        background-image: linear-gradient(180deg,#f78e8e,#f78e8e);
+    }
+    
+    
+    
+        
+}
+    
+    
