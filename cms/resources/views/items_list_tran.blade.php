@@ -6,14 +6,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Neenee-お悩み相談</title>
-        <link rel="stylesheet" href="{{ secure_asset('css/reset.css')}}">
         <link rel="stylesheet" href="{{ secure_asset('css/style.css')}}">
-
+        <link rel="stylesheet" href="{{ secure_asset('css/reset.css')}}">
+        
     </head>    
 
-    <header class="header">　
+    <header class="header">
         <div class="headerLogo" >
-            <a href="{{url('/') }}" ><img src="/image/icon.jpg" alt="TOP画像" class="example1 icon1"></a>
+            <a href="{{url('/') }}" ><img src="/image/icon2.jpg" alt="TOP画像" class="example1 icon1"></a>
         </div>
         
         <div>
@@ -25,7 +25,7 @@
     
     <div class="pc-view">
     <div class="sales-header">
-        <p class="sales-header-text">出品した商品の一覧</p>
+        <p class="sales-header-text">購入した商品の一覧</p>
     </div>
 
     @foreach ($items as $item)
@@ -137,14 +137,14 @@
         </td>
         
         <!--本の削除ボタン-->
-        <td>
-            <form action="{{url('items/delete/'.$item->id)}}" method="POST">
-                {{ csrf_field() }}
-                <button type="submit" class="btn btn-danger">
-                    <i class="glyphicon glyphicon-trash"></i>削除
-                </button>
-            </form>
-        </td>
+        <!--<td>-->
+        <!--    <form action="{{url('items/delete/'.$item->id)}}" method="POST">-->
+        <!--        {{ csrf_field() }}-->
+        <!--        <button type="submit" class="btn btn-danger">-->
+        <!--            <i class="glyphicon glyphicon-trash"></i>削除-->
+        <!--        </button>-->
+        <!--    </form>-->
+        <!--</td>-->
         
     </div>
     <!--アイテム カード-->

@@ -6,14 +6,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Neenee-お悩み相談</title>
-        <link rel="stylesheet" href="{{ secure_asset('css/style.css')}}">
         <link rel="stylesheet" href="{{ secure_asset('css/reset.css')}}">
-        
+        <link rel="stylesheet" href="{{ secure_asset('css/style.css')}}">
+
     </head>    
 
     <header class="header">　
         <div class="headerLogo" >
-            <a href="{{url('/') }}" ><img src="/image/icon.jpg" alt="TOP画像" class="example1 icon1"></a>
+            <a href="{{url('/') }}" ><img src="/image/icon2.jpg" alt="TOP画像" class="example1 icon1"></a>
         </div>
         
         <div>
@@ -51,11 +51,11 @@
         
         
             <!-- item_cov_img -->
-            <div class="prf2">
-                <label class="label" for="item_cov_img">カバー写真</label><br>
+            <!--<div class="prf2">-->
+            <!--    <label class="label" for="item_cov_img">カバー写真</label><br>-->
                 <!--<input type="text" id="item_cov_img" name="item_cov_img">-->
-                <input type="file" id="item_cov_img" name="item_cov_img" value="{{$item->item_cov_img}}">
-            </div>
+            <!--    <input type="file" id="item_cov_img" name="item_cov_img" value="{{$item->item_cov_img}}">-->
+            <!--</div>-->
             
             <!-- item_img1 -->
             <div class="prf2">

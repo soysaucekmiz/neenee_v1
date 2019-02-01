@@ -1,3 +1,4 @@
+
 $(function(){
 
     let localStream = null;
@@ -59,17 +60,19 @@ $(function(){
         let audioSource = $('#audioSource').val();
         let videoSource = $('#videoSource').val();
         let constraints = {
-            audio: {deviceId: {exact: audioSource}},
+            // audio: {deviceId: {exact: audioSource}},
+            audio: true,
             video: {deviceId: {exact: videoSource}}
         };
-        constraints.video.width = {
-            min: 320,
-            max: 320
-        };
-        constraints.video.height = {
-            min: 240,
-            max: 240        
-        };
+        // constraints.video.width = {
+        //     min: 300,
+        //     max: 300
+        // };
+        
+        // constraints.video.height = {
+        //     min: 300,
+        //     max: 300        
+        // };
 
         if(localStream){
             localStream = null;
@@ -122,7 +125,10 @@ $(function(){
     function addVideo(stream){
         const videoDom = $('<video autoplay>');
         videoDom.attr('id',stream.peerId);
+        videoDom.attr("css", { width: "300px" });
         videoDom.get(0).srcObject = stream;
+        videoDom[0].width = 300;
+        videoDom[0].height = 200;
         $('.videosContainer').append(videoDom);
     }
 

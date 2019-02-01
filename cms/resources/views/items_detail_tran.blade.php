@@ -13,7 +13,7 @@
 
 <body>
     <!--ヘッダ-->
-    <<header class="header">　
+    <header class="header">　
         <div class="headerLogo" >
             <a href="{{url('/') }}" ><img src="/image/icon2.jpg" alt="TOP画像" class="example1 icon1"></a>
         </div>
@@ -27,15 +27,20 @@
     
     <div class="pc-view">
     <!--アイテム詳細-->
+    <!-- item_id -->
+    <div>
+        <input type="hidden" id="item_id" value="{{$item->user_id}}">
+    </div>
+    
     <!--カバー画像-->
-    <div class="profile-header">
+    <div class="profile-header" style="background: url(/img/{{$item->user_id}}/{{$item->item_cov_img}}) center no-repeat;background-size:cover;">
         <!--<img src="/image/bts.jpg" alt="プロフィールヘッダー画像"class="profile-header-img" >-->
-        <img src="/img/{{$item->user_id}}/{{$item->item_cov_img}}" alt="プロフィールヘッダー画像"class="profile-header-img" >
+        <!--<img src="/img/{{$item->user_id}}/{{$item->item_cov_img}}" alt="プロフィールヘッダー画像"class="profile-header-img" >-->
     </div>
     
     <!--出品ユーザー情報-->
-    <div>
-        <!--ユーザー画像 ※一旦ダミー-->
+    <div class="item_block">
+        <!--ユーザー画像 -->
         <div class="profile-img"> 
             <!--<img src="/image/user.jpg" class="profile-icon">-->
             <img src="/img/prof/{{$item->prof_img}}" class="profile-icon">
@@ -44,10 +49,10 @@
         <!--ユーザー情報詳細-->
         <div class="profile-detail">
             
-            <!--ユーザー名 ※一旦ユーザーID-->
+            <!--ユーザー名 -->
             <div class ="profile-user-info">
                     <!--<p class =name2>saki</p>-->
-                    <p class =name2>{{$item->name}}</p>
+                    <p class =name2>{{$item->user_name}}</p>
             </div>
             
             <!--お気に入り数 ※一旦ダミー-->
@@ -99,16 +104,18 @@
             </div>
             <div class="box">
                 <p>お悩み</p>
-            </div>   
+            </div>
         </div>
-
+        
         <!--アイテム画像３つ-->
         <div class="img-list">
             <img img src="/img/{{$item->user_id}}/{{$item->item_img1}}" alt="アイテム画像1" class="item-img" >
             <img img src="/img/{{$item->user_id}}/{{$item->item_img2}}" alt="アイテム画像2" class="item-img" >
             <img img src="/img/{{$item->user_id}}/{{$item->item_img3}}" alt="アイテム画像3" class="item-img" >
         </div>
-
+        
+        
+        
         <!--アイテム説明-->
         <div class="profile-text">
             <!--<p>おはこんばんちわ！遅刻ギリギリでもう-->
@@ -137,25 +144,31 @@
                 <p class="price2">{{$item->item_price}}円</p>
         </div>
         
-        <!--決済じゃなくて更新ボタン-->
+        <!--決済ボタン-->
         <!--<div class="profile-button">-->
         <!--    <a href="{{url('/items_tran')."/".$item->id }}"><button class="buy-button">購入画面にすすむ</button></a>-->
         <!--</div>-->
         
-        <td>
-            <form action="{{url('items_edit/'.$item->id)}}" method="POST">
-                {{ csrf_field() }}
-                <button type="submit" class="btn btn-primary">
-                    <i class="glyphicon glyphicon-pencil"></i>編集
-                </button>
-            </form>
-        </td>
+        <!--決済ボタン-->
+        <!--連絡方法-->
+        <div class="tool-box">
+            <div class="tool-box-child1">
+                <p class="tool-box-name">チャット</p></a>
+            </div>
+            <div class="tool-box-child1">
+                <a href="{{url('/call')."/".$item->id }}"><p class="tool-box-name">音声通話</p>
+            </div>
+            <div class="tool-box-child1">
+                <!--<a href="{{url('/video') }}"><p class="tool-box-name">TV通話</p></a>-->
+                <a href="{{url('/video')."/".$item->id }}"><p class="tool-box-name">TV通話</p></a>
+            </div>
+        </div>
+        
         
     </div>
 
 
-</div>
-
+</div>    
 </body>
     
-</html>
+</html>    

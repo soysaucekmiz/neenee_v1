@@ -18,12 +18,14 @@
 <body>
     <header class="header">　
         <div class="headerLogo" >
-            <a href="{{url('/') }}" ><img src="/image/icon.jpg" alt="TOP画像" class="example1 icon1"></a>
+            <a href="{{url('/') }}" ><img src="/image/icon3.jpg" alt="TOP画像" class="example1 icon1"></a>
         </div>
         
         <div>
-            <a href="{{url('/mypage') }}" ><img src="/image/user.jpg" width="50" height="50" class="icon2"></a>
-            <a href="{{url('/items_create') }}" class="box2">出品する</a>
+            <!--アイコン画像-->
+            <a href="{{url('/mypage') }}" ><img src="/img/prof/{{Auth::user()->prof_img}}" width="50" height="50" class="icon2"></a> <!-- "/image/user.jpg" -->
+            <!--出品画像-->
+            <!--<a href="{{url('/items_create') }}" class="box2">出品する</a>-->
         </div>
             
     </header>
@@ -31,13 +33,14 @@
     <div class="pc-view">
 
     <!--アイテム情報-->
-    <div>
-        <p>アイテム名：{{$item->item_name}}</p>
-        <p>出品者（ID）：{{$item->user_id}}</p>
-        <input type="hidden" id="username" value="{{Auth::user()->name}}">
-        <input type="hidden" id="item_id" value="{{$item->id}}">
-        <input type="hidden" id="item_url" value="{{url('/items_detail_search')."/".$item->id}}">
-    </div>
+    <div class="card">
+        <div>
+            <!--<p>アイテム名：{{$item->item_name}}</p>-->
+            <!--<p>出品者（ID）：{{$item->user_id}}</p>-->
+            <input type="hidden" id="username" value="{{Auth::user()->name}}">
+            <input type="hidden" id="item_id" value="{{$item->id}}">
+            <input type="hidden" id="item_url" value="{{url('/items_detail_search')."/".$item->id}}">
+        </div>
     
     <!--連絡方法-->
     <div class="tool-box">
@@ -80,8 +83,9 @@
         <button class="ok-button">通話をやめる</button>
     </div>
 
+    </div>
 </div>
-
-</div>
+</div>    
 </body>
-</html>
+    
+</html>   

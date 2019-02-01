@@ -6,22 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neenee-お悩み相談</title>
-    <link rel="stylesheet" href="{{ secure_asset('css/style.css')}}">
     <link rel="stylesheet" href="{{ secure_asset('css/reset.css')}}">
+    <link rel="stylesheet" href="{{ secure_asset('css/style.css')}}">
+
     
 </head>    
 
 
 <body>
     
-    <header class="header">
+    <header class="header">　
         <div class="headerLogo" >
-            <a href="{{url('/') }}" ><img src="/image/icon.jpg" alt="TOP画像" class="example1 icon1"></a>
+            <a href="{{url('/') }}" ><img src="/image/icon3.jpg" alt="TOP画像" class="example1 icon1"></a>
         </div>
         
         <div>
-            <!-- <a href="{{url('/mypage') }}" ><img src="/image/user.jpg" width="50" height="50" class="icon2"></a>
-            <a href="{{url('/items_create') }}" class="box2">出品する</a> -->
+            <!--<a href="{{url('/mypage') }}" ><img src="/image/user.jpg" width="50" height="50" class="icon2"></a>-->
+            <!--<a href="{{url('/items_create') }}" class="box2">出品する</a>-->
         </div>
             
     </header>
@@ -92,7 +93,7 @@
                             <div class="col-md-8 offset-md-4">
                                 
                                 <!-- button -->
-                                <button type="submit" class="buy-button">
+                                <button type="submit" class="buy-button3">
                                     {{ __('ログイン') }}
                                 </button>
                                 <!-- button -->
@@ -112,7 +113,7 @@
                                 <a class="label2" href="{{url('/register/')}}">新規登録</a>
                                 <br>
                                 <!-- register （仮） -->
-
+                                
                             </div>
                         </div>
                         <!-- submit -->

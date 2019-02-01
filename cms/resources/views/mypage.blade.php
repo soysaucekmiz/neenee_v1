@@ -6,26 +6,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neenee-お悩み相談</title>
-    <link rel="stylesheet" href="{{ secure_asset('css/style.css')}}">
     <link rel="stylesheet" href="{{ secure_asset('css/reset.css')}}">
-    
+    <link rel="stylesheet" href="{{ secure_asset('css/style.css')}}">
+
 </head>    
 
     <header class="header">　
         <div class="headerLogo" >
-            <a href="{{url('/') }}" ><img src="/image/icon.jpg" alt="TOP画像" class="example1 icon1"></a>
+            <a href="{{url('/') }}" ><img src="/image/icon3.jpg" alt="TOP画像" class="example1 icon1"></a>
         </div>
         
         <div>
-            <a href="{{url('/mypage') }}" ><img src="/image/user.jpg" width="50" height="50" class="icon2"></a>
-            <a href="{{url('/items_create') }}" class="box2">出品する</a>
+            <!--アイコン画像-->
+            <a href="{{url('/mypage') }}" ><img src="/img/prof/{{Auth::user()->prof_img}}" width="50" height="50" class="icon2"></a> <!-- "/image/user.jpg" -->
+            <!--出品画像-->
+            <!--<a href="{{url('/items_create') }}" class="box2">出品する</a>-->
         </div>
             
     </header>
     
     <div class="pc-view">
     <!--ユーザー登録情報-->
-    <div class="sales-header">
+    <div class="sales-header3">
         <p class="sales-header-text">登録情報の確認</p>
     </div>
     
@@ -62,16 +64,16 @@
     </div> 
     
     <br>
-    <div class="profile-button">
-        <a href="{{url('/') }}"><button class="buy-button">TOPにもどる</button></a>
-    </div>
 
     <div class="profile-button">
-        <a href="{{url('/items_create')}}"><button class="buy-button">出品する</button></a>
+        <a href="{{url('/items_create')}}"><button class="buy-button3">出品する</button></a>
     </div>
     
     <div class="profile-button">
-        <a href="{{url('/items_list_sell')}}"><button class="buy-button">出品一覧</button></a>
+        <a href="{{url('/items_list_sell')}}"><button class="buy-button3">出品一覧</button></a>
+    </div>
+    <div class="profile-button">
+        <a href="{{url('/') }}"><button class="buy-button3">TOPにもどる</button></a>
     </div>
 
     <!--ログアウト-->
@@ -79,7 +81,7 @@
         <a href="{{ route('logout') }}"
         onclick="event.preventDefault();
         document.getElementById('logout-form').submit();">
-            <button class="buy-button">ログアウト</button>
+            <button class="buy-button3">ログアウト</button>
         </a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf

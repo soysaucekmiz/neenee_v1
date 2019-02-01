@@ -7,29 +7,37 @@
         background-color: #FFF0F5;
     }
 
-    .videosContainer{
-        margin-top: 10px;
-        text-align: center;
-    }
+    /*.videosContainer{*/
+    /*    margin-top: 20px;*/
+    /*    text-align: center;*/
+        /*width: 200px;*/
+    /*}*/
+    
+    /*.myControllerContainer{*/
+        /*width: 300px;*/
+    /*}*/
 
 
 
-@media screen and (max-width:640px){
+
+
+
+/*@media screen and (max-width:640px){*/
   
     
-    body {background-color: #FFF0F5;
-    }
+/*    body {background-color: #FFF0F5;*/
+/*    }*/
     
-    .videosContainer{
-        margin-top: 10px;
-        margin-left: 10px;
-        text-align: left;
+/*    .videosContainer{*/
+/*        margin-top: 10px;*/
+/*        margin-left: 10px;*/
+/*        text-align: left;*/
         
-    }
+/*    }*/
     
-    .test{
-        width:150px;
-        height:150px;
-        text-align: left;
-    }
-}
+/*    .test{*/
+/*        width:150px;*/
+/*        height:150px;*/
+/*        text-align: left;*/
+/*    }*/
+/*}*/

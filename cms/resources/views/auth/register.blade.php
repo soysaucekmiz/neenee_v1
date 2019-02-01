@@ -15,20 +15,20 @@
 
 <body>
     
-    <header class="header">
+    <header class="header">　
         <div class="headerLogo" >
-            <a href="{{url('/') }}" ><img src="/image/icon.jpg" alt="TOP画像" class="example1 icon1"></a>
+            <a href="{{url('/') }}" ><img src="/image/icon3.jpg" alt="TOP画像" class="example1 icon1"></a>
         </div>
         
         <div>
-            <!-- <a href="{{url('/mypage') }}" ><img src="/image/user.jpg" width="50" height="50" class="icon2"></a>
-            <a href="{{url('/items_create') }}" class="box2">出品する</a> -->
+            <!--<a href="{{url('/mypage') }}" ><img src="/image/user.jpg" width="50" height="50" class="icon2"></a>-->
+            <!--<a href="{{url('/items_create') }}" class="box2">出品する</a>-->
         </div>
             
     </header>
     
     <div class="pc-view">
-    <div class="sales-header">
+    <div class="sales-header3">
         <p class="sales-header-text">会員登録</p>
     </div>
 
@@ -120,7 +120,7 @@
                             <!-- button -->
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4">
-                                    <button type="submit" class="buy-button">
+                                    <button type="submit" class="buy-button3">
                                         {{ __('登録') }} <!-- 'Register' -> '登録' -->
                                     </button>
                                 </div>
@@ -128,11 +128,11 @@
                             <!-- button -->
                             
                             <!-- login （仮） -->
-                            <br>
+                                <br>
                                 <a class="label2" href="{{url('/login/')}}">ログイン</a>
                                 <br>
                             <!-- login （仮） -->
-                            
+                                
                         </form>
                     </div>
                 </div>

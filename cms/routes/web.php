@@ -134,8 +134,14 @@ Route::get('items_list_search', 'ItemsController@show');
 // アイテム 一覧 出品 (画面) 
 Route::get('/items_list_sell', 'ItemsController@showSellingItems');
 
-// あとで書く！
-// アイテム 一覧 購入 (read) ※優先度低い
+// アイテム 一覧 購入 (画面) 
+Route::get('/items_list_tran.', 'ItemsController@showPurchasedItems');
+
+
+
+
+// 過去のやつ
+// アイテム 一覧 購入 (read) 
 /*
 Route::get('/hoge', function(){
     // 

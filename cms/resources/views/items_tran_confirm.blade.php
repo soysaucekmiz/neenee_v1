@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neenee-お悩み相談</title>
-    <link rel="stylesheet" href="{{ secure_asset('css/style.css')}}">
     <link rel="stylesheet" href="{{ secure_asset('css/reset.css')}}">
-    
+    <link rel="stylesheet" href="{{ secure_asset('css/style.css')}}">
+
 </head>    
 
 
@@ -16,25 +16,27 @@
     <!--ヘッダ-->
     <header class="header">　
         <div class="headerLogo" >
-            <a href="{{url('/') }}" ><img src="/image/icon.jpg" alt="TOP画像" class="example1 icon1"></a>
+            <a href="{{url('/') }}" ><img src="/image/icon3.jpg" alt="TOP画像" class="example1 icon1"></a>
         </div>
         
         <div>
-            <a href="{{url('/mypage') }}" ><img src="/image/user.jpg" width="50" height="50" class="icon2"></a>
-            <a href="{{url('/items_create') }}" class="box2">出品する</a>
+            <!--アイコン画像-->
+            <a href="{{url('/mypage') }}" ><img src="/img/prof/{{Auth::user()->prof_img}}" width="50" height="50" class="icon2"></a> <!-- "/image/user.jpg" -->
+            <!--出品画像-->
+            <!--<a href="{{url('/items_create') }}" class="box2">出品する</a>-->
         </div>
             
     </header>
     
     <div class="pc-view">
         <!--支払い情報-->
-        <div class="sales-header">
-        <p class="sales-header-text">お支払い方法の確定</p>
-        </div>
+        <!--<div class="sales-header">-->
+        <!--<p class="sales-header-text">お支払い方法の確定</p>-->
+        <!--</div>-->
         
         <!--アイテム情報-->
         <div>
-        <div class="sales-card">
+        <div class="card">
         
             <!--アイテムカバー画像-->
             <div class="service-img2"> 
@@ -105,7 +107,7 @@
                     <p class="star-count">(55件)</p>
                 </div>
                 <div>
-                    <img src="/image/heart.jpg" class="heart-icon">
+                    <img src="/image/heart2.jpg" class="heart-icon">
                 </div>    
                 <div>
                     <p class="heart-count">121</p>
@@ -116,14 +118,17 @@
     <!--</div> -->
     
     <!--料金-->
-    <div class="sales-price">
-        <p class="price3">お支払い金額</p>
-        <!--<p class="price4">10分/1,000円</p>-->
-        <p class="price4">{{$item->item_price}}円</p>
+    <div class="card">
+        <div class="tran-price">
+            <p class="tran-price-1">お支払い金額</p>
+            
+            <!--<p class="price4">10分/1,000円</p>-->
+            <p class="tran-price2">{{$item->item_price}}円</p>
+        </div>
     </div>
 </div> 
 
-<div class="sales-header">
+<div class="sales-header3">
     <p class="sales-header-text">お支払い方法</p>
 </div>
 <div >
@@ -147,7 +152,7 @@
     </ul>
 </div>
 <div class="profile-button">
-    <a href="{{url('/chat')."/".$item->id }}"><button class="buy-button">確定する</button></a>
+    <a href="{{url('/chat')."/".$item->id }}"><button class="buy-button3">確定する</button></a>
 </div>
     
     
