@@ -6,7 +6,7 @@
     }
     
     body{
-        background-color: #FFF0F5;
+        background-color: #fff6f6;
         font-size: 1.6rem;
         font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
         font-weight: 500;
@@ -19,13 +19,18 @@
 
     .header{
     padding:10px;
-    background-color: white;
+    /*background-color: white;*/
     /*background: linear-gradient(-45deg, rgb(240, 187, 95), rgb(238, 96, 96),*/
     /*rgb(255, 146, 255), rgb(157, 157, 250),rgb(203, 141, 248));*/
     
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
+    background-color: white;
     }
     .headerLogo{
         width: 40%;
@@ -105,6 +110,9 @@
     margin: auto;
     background-color: #ffe2e036;
     padding-bottom: 30px;
+    z-index: 0;
+    padding-top: 72px;
+    position: initial;
     }
     
     
@@ -186,7 +194,7 @@
         font-size: 14px;
         color: rgb(8, 8, 8);
         background: #FFF;
-        border: solid 1px #999;
+        border: solid 1px rgb(252, 180, 180);
         border-radius: 5px;
         margin: 0 2px 3px 0;
         letter-spacing: 0.2px;
@@ -266,7 +274,7 @@
     color: #555;
     font-size: 16px;
     /* background: #ffe2e0; */
-    background: #f7f5f5;
+    background: #fff1f1;
     border-radius: 15px;
     box-sizing: border-box;
     line-height: 1.2;
@@ -280,7 +288,7 @@
     margin-top: -12px;
     border: 12px solid transparent;
     /* border-right: 14px solid #ffe2e0; */
-    border-right: 14px solid #f7f5f5;
+    border-right: 14px solid #f6dede;
     z-index: 1;
    }
    
@@ -813,7 +821,10 @@
     }
 
 
-
+    .pagination{
+        display: flex;
+        justify-content: space-around;
+    }
 
 
 
@@ -822,9 +833,9 @@
 @media screen and (max-width:640px){
   
     
-    body {background-color: #FFF0F5;
+    body {
+    background-color: #fff6f6;
     font-size: 1.6rem;
-    background-color: #FFF0F5;
     font-size: 1.6rem;
     font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
     font-weight: 500;
@@ -836,13 +847,18 @@
     
     .header{
     padding:10px;
-    background-color: white;
+    /*background-color: white;*/
     /*background: linear-gradient(-45deg, rgb(240, 187, 95), rgb(238, 96, 96),*/
     /*rgb(255, 146, 255), rgb(157, 157, 250),rgb(203, 141, 248));*/
     
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
+    background-color: white;
     }
     .headerLogo{
         width: 40%;
@@ -992,7 +1008,7 @@
     font-size: 14px;
     color: rgb(8, 8, 8);
     background: #FFF;
-    border: solid 1px #999;
+    border: solid 1px rgb(252, 180, 180);
     border-radius: 5px;
     margin: 0 2px 3px 0;
     letter-spacing: 0.2px;
@@ -1071,7 +1087,7 @@
     color: #555;
     font-size: 16px;
     /* background: #ffe2e0; */
-    background: #f7f5f5;
+    background: #fff1f1;
     border-radius: 15px;
     box-sizing: border-box;
     line-height: 1.2;
@@ -1085,7 +1101,7 @@
     margin-top: -12px;
     border: 12px solid transparent;
     /* border-right: 14px solid #ffe2e0; */
-    border-right: 14px solid #f7f5f5;
+    border-right: 14px solid #fff1f1;
     z-index: 1;
    }
    
@@ -1100,7 +1116,7 @@
     ----------*/
     .container {
         /*margin: 0 auto;*/
-        /*padding: 40px;*/
+        /*padding: 40px;*
         /*width: 80%;*/
         /*color: #333;*/
         /*background: #ffdff1;*/
@@ -1632,7 +1648,10 @@
         border-radius: 5px;
     }
     
-    
+    .pagination{
+        display: flex;
+        justify-content: space-around;
+    }
     
         
 }
