@@ -30,9 +30,9 @@
             
     <!--</header>-->
     
-    <header class="header">
+    <header class="header"> 
         <div class="headerLogo" >
-            <a href="{{url('/') }}" ><img src="/image/icon3.jpg" alt="TOP画像" class="example1 icon1"></a>
+            <a href="{{url('/') }}" ><img src="/image/icon5.png" alt="TOP画像" class="example1 icon1"></a>
         </div>
         
         @if(Auth::user())
@@ -43,14 +43,15 @@
                 <!--<a href="{{url('/items_create') }}" class="box2">出品する</a>-->
             </div>
         @else
-        <div>
-            <!--アイコン画像-->
+            <div>
+                <!--アイコン画像-->
                 <a href="{{url('/login') }}" class="box2">ログイン</a>
                 <!--出品画像-->
                 <!--<a href="{{url('/items_create') }}" class="box2">出品する</a>-->
             </div>
         @endif
-            
+        
+        
     </header>
     
     
@@ -175,10 +176,10 @@
             </div>
             
             <!--料金-->
-            <div class="">
+            <!--<div class="">-->
                 <!--<p class="price">10分/1,000円</p>-->
-                <p class="price">{{$item->item_price}}円</p>
-            </div>
+            <!--    <p class="price">{{$item->item_price}}円</p>-->
+            <!--</div>-->
         </div>
         
     </div>

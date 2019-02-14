@@ -48,7 +48,8 @@ $(function(){
         if (!roomName) {
             return;
         }
-        const　call = peer.joinRoom(roomName, {mode: 'sfu', stream: localStream});
+        // const call = peer.joinRoom(roomName, {mode: 'sfu', stream: localStream});
+        const call = peer.joinRoom(roomName, {mode: 'mesh', videoCodec: 'H264', stream: localStream});
         setupCallEventHandlers(call);
     });
 
@@ -62,7 +63,13 @@ $(function(){
         let constraints = {
             // audio: {deviceId: {exact: audioSource}},
             audio: true,
-            video: {deviceId: {exact: videoSource}}
+            video: {
+                width: { min: 320, max: 1280 },
+                height: { min: 240, max: 720  }
+            }
+
+            // video: {deviceId: {exact: videoSource}}
+            // video: {facingMode: 'user'}
         };
         // constraints.video.width = {
         //     min: 300,
@@ -123,12 +130,14 @@ $(function(){
     }
 
     function addVideo(stream){
-        const videoDom = $('<video autoplay>');
+        const videoDom = $('<video autoplay playsinline="true">');
         videoDom.attr('id',stream.peerId);
         videoDom.attr("css", { width: "300px" });
+        videoDom.css({"width":"100%","height":"auto"});
         videoDom.get(0).srcObject = stream;
         videoDom[0].width = 300;
         videoDom[0].height = 200;
+        $("#myStream").css({"width":"100px","position":"absolute","right":"2px","bottom":"2px","border":"solid 3px #fff"});
         $('.videosContainer').append(videoDom);
     }
 

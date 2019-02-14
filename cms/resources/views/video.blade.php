@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="header">　
+    <header class="header">
         <div class="headerLogo" >
             <a href="{{url('/') }}" ><img src="/image/icon3.jpg" alt="TOP画像" class="example1 icon1"></a>
         </div>
@@ -55,7 +55,7 @@
 
 
 <div class="videosContainer">
-    <video id="myStream" autoplay="true" playsinline="true" muted="true" class="test" width="300" height="200"></video>
+    <video id="myStream" autoplay="true" playsinline="true" muted="true" class="test" style=" width: 100%;height: auto;"></video>
     <!--<video src="" id="myStream" autoplay playsinline muted="true"  class="test"></video>-->
 
 </div>
