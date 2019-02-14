@@ -15,7 +15,7 @@
 
 <body>
     
-    <header class="header">　
+    <header class="header">
         <div class="headerLogo" >
             <a href="{{url('/') }}" ><img src="/image/icon3.jpg" alt="TOP画像" class="example1 icon1"></a>
         </div>
@@ -34,6 +34,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
+
+            <b>テスト用アカウント</b><br>
+            <p>メールアドレス：test12@test.com</p>
+            <p>パスワード：123456</p><br>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ secure_asset('css/reset.css')}}">
     <link rel="stylesheet" href="{{ secure_asset('css/slick-theme.css')}}">
     <link rel="stylesheet" href="{{ secure_asset('css/slick.css')}}" >
-    <script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="{{ secure_asset('js/slick.js')}}"></script>
     <link rel="stylesheet" href="{{ secure_asset('css/style.css')}}">
 
@@ -21,17 +21,26 @@
 
 <body>
     <!--ヘッダ-->
-    <header class="header">　
+    <header class="header">
         <div class="headerLogo" >
             <a href="{{url('/') }}" ><img src="/image/icon3.jpg" alt="TOP画像" class="example1 icon1"></a>
         </div>
         
+        @if(Auth::user())
+            <div>
+                <!--アイコン画像-->
+                <a href="{{url('/mypage') }}" ><img src="/img/prof/{{Auth::user()->prof_img}}" width="50" height="50" class="icon2"></a> <!-- "/image/user.jpg" -->
+                <!--出品画像-->
+                <!--<a href="{{url('/items_create') }}" class="box2">出品する</a>-->
+            </div>
+        @else
         <div>
             <!--アイコン画像-->
-            <a href="{{url('/mypage') }}" ><img src="/img/prof/{{Auth::user()->prof_img}}" width="50" height="50" class="icon2"></a> <!-- "/image/user.jpg" -->
-            <!--出品画像-->
-            <!--<a href="{{url('/items_create') }}" class="box2">出品する</a>-->
-        </div>
+                <a href="{{url('/login') }}" class="box2">ログイン</a>
+                <!--出品画像-->
+                <!--<a href="{{url('/items_create') }}" class="box2">出品する</a>-->
+            </div>
+        @endif
             
     </header>
     
@@ -43,12 +52,15 @@
         <div class='container '>
             <div class='single-item item-img'>
               <div class="item_size" style="background:url(/img/{{$item->user_id}}/{{$item->item_img1}}) center no-repeat;background-size:contain;"></div>
-              <?php if ($item->item_img2): ?>
-                  <div class="item_size" style="background:url(/img/{{$item->user_id}}/{{$item->item_img2}}) center no-repeat;background-size:contain;"></div>
-              <?php endif; ?>
-              <?php if ($item->item_img3): ?>
+              
+              @if($item->item_img2)
+                <div class="item_size" style="background:url(/img/{{$item->user_id}}/{{$item->item_img2}}) center no-repeat;background-size:contain;"></div>
+              @endif
+
+              @if($item->item_img3)
                   <div class="item_size" style="background:url(/img/{{$item->user_id}}/{{$item->item_img3}}) center no-repeat;background-size:contain;"></div>
-              <?php endif; ?>
+              @endif
+
             </div>
         </div>
         

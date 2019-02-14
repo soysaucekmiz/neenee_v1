@@ -14,7 +14,7 @@
 
 
 <body>
-    <!--<header class="header">　-->
+    <!--<header class="header"> -->
     <!--    <div class="logo-login">-->
     <!--        <div class="header-wrapper">-->
     <!--            <section>-->
@@ -30,17 +30,26 @@
             
     <!--</header>-->
     
-    <header class="header">　
+    <header class="header">
         <div class="headerLogo" >
             <a href="{{url('/') }}" ><img src="/image/icon3.jpg" alt="TOP画像" class="example1 icon1"></a>
         </div>
         
+        @if(Auth::user())
+            <div>
+                <!--アイコン画像-->
+                <a href="{{url('/mypage') }}" ><img src="/img/prof/{{Auth::user()->prof_img}}" width="50" height="50" class="icon2"></a> <!-- "/image/user.jpg" -->
+                <!--出品画像-->
+                <!--<a href="{{url('/items_create') }}" class="box2">出品する</a>-->
+            </div>
+        @else
         <div>
             <!--アイコン画像-->
-            <a href="{{url('/mypage') }}" ><img src="/img/prof/{{Auth::user()->prof_img}}" width="50" height="50" class="icon2"></a> <!-- "/image/user.jpg" -->
-            <!--出品画像-->
-            <!--<a href="{{url('/items_create') }}" class="box2">出品する</a>-->
-        </div>
+                <a href="{{url('/login') }}" class="box2">ログイン</a>
+                <!--出品画像-->
+                <!--<a href="{{url('/items_create') }}" class="box2">出品する</a>-->
+            </div>
+        @endif
             
     </header>
     
